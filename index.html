@@ -3,58 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThruputDynamics | Business Systems & Automation</title>
+    <title>ThruputDynamics | Systems, Automation & AI</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --cobalt: #0047AB; --slate: #1e272e; --light: #f4f7f6; }
+        :root { --cobalt: #0047AB; --neon: #00d8ff; --slate: #1e272e; --light: #f4f7f6; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--slate); margin: 0; background: white; }
         header { padding: 100px 20px; text-align: center; background: var(--light); border-bottom: 1px solid #e1e8e7; }
         .logo { font-weight: 700; letter-spacing: -1.5px; font-size: 2.5rem; color: var(--cobalt); text-transform: uppercase; }
         .hero-text { max-width: 700px; margin: 25px auto; font-size: 1.25rem; color: #485460; font-weight: 300; }
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
-        .section-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--cobalt); font-weight: 700; margin-bottom: 30px; display: block; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-        .feature h3 { font-size: 1.4rem; margin-bottom: 10px; }
-        .badge { display: inline-block; background: #d1d8e0; color: #2f3542; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin: 5px 3px 0 0; text-transform: uppercase; }
-        .cta-box { background: var(--slate); color: white; padding: 40px; border-radius: 12px; text-align: center; margin-top: 60px; }
-        .cta-box a { color: #00d8ff; text-decoration: none; font-weight: 700; border-bottom: 2px solid transparent; transition: 0.3s; }
-        .cta-box a:hover { border-bottom: 2px solid #00d8ff; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--cobalt); font-weight: 700; margin-bottom: 40px; display: block; text-align: center; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .card { background: #fff; padding: 30px; border: 1px solid #eee; border-radius: 8px; transition: 0.3s; }
+        .card:hover { border-color: var(--cobalt); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .card h3 { margin-top: 0; color: var(--cobalt); }
+        .badge { display: inline-block; background: #f0f2f5; color: #57606f; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin: 5px 2px 0 0; text-transform: uppercase; }
+        .innovation-grid { grid-template-columns: 1fr 1fr 1fr; margin-top: 20px; }
+        .cta-box { background: var(--slate); color: white; padding: 50px; border-radius: 12px; text-align: center; margin-top: 60px; }
+        .cta-box a { color: var(--neon); text-decoration: none; font-weight: 700; border-bottom: 2px solid transparent; transition: 0.3s; }
+        .cta-box a:hover { border-bottom: 2px solid var(--neon); }
         footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #a4b0be; }
-        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .grid, .innovation-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">ThruputDynamics</div>
-    <p class="hero-text">Architecting high-efficiency <strong>Digital Ecosystems</strong> through custom low-code development and enterprise automation.</p>
+    <p class="hero-text">Engineering high-efficiency <strong>Digital Workflows</strong> and <strong>Automated Communities</strong>.</p>
 </header>
 
 <div class="container">
-    <span class="section-title">Expertise & Focus</span>
+    <span class="section-title">Core Systems Stack</span>
     <div class="grid">
-        <div class="feature">
-            <h3>Microsoft Ecosystem</h3>
-            <p>Deploying professional-grade Power Platform solutions, from complex Power BI analytics to Power Automate cloud workflows.</p>
-            <div class="badge">Power Apps</div> <div class="badge">Power BI</div> <div class="badge">Dataverse</div>
+        <div class="card">
+            <h3>Enterprise Automation</h3>
+            <p>Advanced Microsoft Power Platform solutions and Google Workspace optimization.</p>
+            <div class="badge">Power Apps</div> <div class="badge">Power Automate</div> <div class="badge">AppSheet</div> <div class="badge">Apps Script</div>
         </div>
-        <div class="feature">
-            <h3>Google Enterprise</h3>
-            <p>Custom Google Apps Script development and AppSheet integration to maximize ROI on existing Workspace environments.</p>
-            <div class="badge">Apps Script</div> <div class="badge">AppSheet</div> <div class="badge">Workspace API</div>
+        <div class="card">
+            <h3>Data & Logic</h3>
+            <p>High-level Excel engineering (Power Query/DAX) and foundational programming.</p>
+            <div class="badge">Excel Expert</div> <div class="badge">VBA</div> <div class="badge">Python</div> <div class="badge">JavaScript</div>
+        </div>
+    </div>
+
+    <span class="section-title" style="margin-top: 80px;">The Innovation Hub</span>
+    <div class="grid innovation-grid">
+        <div class="card">
+            <h4>Gaming Infra</h4>
+            <p>Architecture and management of high-performance gaming servers.</p>
+        </div>
+        <div class="card">
+            <h4>Social Automations</h4>
+            <p>Advanced Discord server architecture and custom bot deployment.</p>
+        </div>
+        <div class="card">
+            <h4>AI Integration</h4>
+            <p>Developing intelligent agents and AI bots for streamlined communication.</p>
         </div>
     </div>
 
     <div class="cta-box">
-        <h3>2026 Innovation Phase</h3>
-        <p>Currently developing internal automation frameworks and technical documentation. Consultancy services arriving 2027.</p>
-        <p>Get in touch: <a href="mailto:info@thruputdynamics.com">info@thruputdynamics.com</a></p>
-    </div>
-</div>
-
-<footer>
-    &copy; 2026 ThruputDynamics &bull; Systems Specialist &bull; Latvia
-</footer>
-
-</body>
-</html>
+        <h3>2026 R&D Phase</h3>
+        <p>Building the next generation of thruput-focused systems. Full launch 2027.</p>
+        <p>Inquiries: <a href="mailto:info@thruputdynamics.com">info@thruputdynamics.com</a>
