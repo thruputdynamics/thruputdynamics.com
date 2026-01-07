@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThruputDynamics | Systems & Automation</title>
+    <title>ThruputDynamics | Business Systems & Automation</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --cobalt: #0047AB; --slate: #2d3436; --light: #f9f9f9; }
+        :root { --cobalt: #0047AB; --slate: #1e272e; --light: #f4f7f6; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--slate); margin: 0; background: white; }
-        header { padding: 80px 20px; text-align: center; background: var(--light); border-bottom: 1px solid #eee; }
-        .logo { font-weight: 700; letter-spacing: -1px; font-size: 2rem; color: var(--cobalt); text-transform: uppercase; }
-        .hero-text { max-width: 600px; margin: 20px auto; font-size: 1.2rem; color: #636e72; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
-        h2 { border-left: 4px solid var(--cobalt); padding-left: 15px; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px; }
-        .badge { display: inline-block; background: #e1f5fe; color: #01579b; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 700; margin-bottom: 10px; }
-        footer { text-align: center; padding: 60px 20px; font-size: 0.9rem; color: #b2bec3; }
+        header { padding: 100px 20px; text-align: center; background: var(--light); border-bottom: 1px solid #e1e8e7; }
+        .logo { font-weight: 700; letter-spacing: -1.5px; font-size: 2.5rem; color: var(--cobalt); text-transform: uppercase; }
+        .hero-text { max-width: 700px; margin: 25px auto; font-size: 1.25rem; color: #485460; font-weight: 300; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--cobalt); font-weight: 700; margin-bottom: 30px; display: block; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .feature h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .badge { display: inline-block; background: #d1d8e0; color: #2f3542; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin: 5px 3px 0 0; text-transform: uppercase; }
+        .cta-box { background: var(--slate); color: white; padding: 40px; border-radius: 12px; text-align: center; margin-top: 60px; }
+        .cta-box a { color: #00d8ff; text-decoration: none; font-weight: 700; border-bottom: 2px solid transparent; transition: 0.3s; }
+        .cta-box a:hover { border-bottom: 2px solid #00d8ff; }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #a4b0be; }
         @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -23,34 +27,33 @@
 
 <header>
     <div class="logo">ThruputDynamics</div>
-    <p class="hero-text">Bridging the gap between <strong>Mechanical Precision</strong> and <strong>Digital Automation</strong>.</p>
+    <p class="hero-text">Architecting high-efficiency <strong>Digital Ecosystems</strong> through custom low-code development and enterprise automation.</p>
 </header>
 
 <div class="container">
+    <span class="section-title">Expertise & Focus</span>
     <div class="grid">
-        <div>
-            <h2>Digital Systems</h2>
-            <p>Specializing in Microsoft Power Platform and Google Enterprise ecosystems to streamline business workflows.</p>
-            <div class="badge">Power BI</div> <div class="badge">Apps Script</div> <div class="badge">Power Automate</div>
+        <div class="feature">
+            <h3>Microsoft Ecosystem</h3>
+            <p>Deploying professional-grade Power Platform solutions, from complex Power BI analytics to Power Automate cloud workflows.</p>
+            <div class="badge">Power Apps</div> <div class="badge">Power BI</div> <div class="badge">Dataverse</div>
         </div>
-        <div>
-            <h2>Mechanical Expertise</h2>
-            <p>Advanced vehicle diagnostics and system throughput analysis. Data-driven maintenance for complex machinery.</p>
-            <div class="badge">Diagnostics</div> <div class="badge">Maintenance Logic</div>
+        <div class="feature">
+            <h3>Google Enterprise</h3>
+            <p>Custom Google Apps Script development and AppSheet integration to maximize ROI on existing Workspace environments.</p>
+            <div class="badge">Apps Script</div> <div class="badge">AppSheet</div> <div class="badge">Workspace API</div>
         </div>
     </div>
 
-    <hr style="margin: 60px 0; border: 0; border-top: 1px solid #eee;">
-
-    <div style="text-align: center;">
-        <h2>The 2026 Roadmap</h2>
-        <p>Currently in <strong>Research & Development</strong>. Building a suite of custom automation tools for the automotive and logistics industries. Full consultancy launch scheduled for 2027.</p>
-        <a href="mailto:info@thruputdynamics.com" style="text-decoration: none; color: var(--cobalt); font-weight: bold;">Contact for Inquiries &rarr;</a>
+    <div class="cta-box">
+        <h3>2026 Innovation Phase</h3>
+        <p>Currently developing internal automation frameworks and technical documentation. Consultancy services arriving 2027.</p>
+        <p>Get in touch: <a href="mailto:info@thruputdynamics.com">info@thruputdynamics.com</a></p>
     </div>
 </div>
 
 <footer>
-    &copy; 2026 ThruputDynamics. Built on GitHub. Latvia.
+    &copy; 2026 ThruputDynamics &bull; Systems Specialist &bull; Latvia
 </footer>
 
 </body>
