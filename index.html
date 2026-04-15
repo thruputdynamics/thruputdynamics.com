@@ -8,6 +8,11 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
 <style>
 :root {
     --bg: #0b0f19;
@@ -32,16 +37,50 @@ header {
     padding: 120px 20px 100px;
 }
 
+/* LOGO CONTAINER */
+.logo {
+    position: relative;
+}
+
+/* GLOW BEHIND LOGO */
+.logo::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(0,216,255,0.15), transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/* LOGO IMAGE */
 .logo img {
-    max-width: 360px;
+    max-width: 340px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+
+    /* blend into background */
+    mix-blend-mode: screen;
+
+    /* improve contrast */
+    filter: brightness(1.2) contrast(1.1);
+
+    /* glow */
+    box-shadow: 0 0 40px rgba(37,99,235,0.25);
+
     animation: float 6s ease-in-out infinite;
 }
 
+/* FLOAT ANIMATION */
 @keyframes float {
     0%,100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
 
+/* HERO TEXT */
 .hero-title {
     font-size: 2.5rem;
     margin-top: 30px;
@@ -185,7 +224,7 @@ footer {
 
     <p class="hero-text">
         We build intelligent systems that combine <strong>Lean methodology</strong> with 
-        <strong>automation and AI</strong> to optimize real-world operations.
+        <strong>automation and AI</strong>.
     </p>
 
     <a href="mailto:info@thruputdynamics.com" class="cta-btn">
@@ -260,7 +299,6 @@ footer {
 </footer>
 
 <script>
-/* SCROLL ANIMATION */
 const cards = document.querySelectorAll('.card');
 
 const observer = new IntersectionObserver(entries => {
