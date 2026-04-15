@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThruputDynamics | Operational Excellence & Automation</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root { 
             --cobalt: #0047AB; 
@@ -14,28 +15,79 @@
             --border: #e2e8f0;
         }
         
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--slate); margin: 0; background: var(--light-bg); overflow-x: hidden; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            color: var(--slate); 
+            margin: 0; 
+            background: var(--light-bg); 
+            overflow-x: hidden; 
+        }
         
         /* Subtle Grid Pattern Background */
         body::before {
             content: "";
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
             background-image: radial-gradient(#cbd5e1 0.5px, transparent 0.5px);
             background-size: 24px 24px;
-            opacity: 0.3; z-index: -1;
+            opacity: 0.3; 
+            z-index: -1;
         }
 
-        header { padding: 120px 20px; text-align: center; background: white; border-bottom: 1px solid var(--border); }
-        .logo { font-weight: 700; letter-spacing: -2px; font-size: 2.8rem; color: var(--cobalt); text-transform: uppercase; }
-        .hero-text { max-width: 800px; margin: 25px auto; font-size: 1.4rem; color: #475569; font-weight: 300; }
-        .hero-text strong { color: var(--slate); font-weight: 600; }
+        header { 
+            padding: 100px 20px; 
+            text-align: center; 
+            background: white; 
+            border-bottom: 1px solid var(--border); 
+        }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
+        .logo img {
+            max-width: 360px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .hero-text { 
+            max-width: 800px; 
+            margin: 25px auto; 
+            font-size: 1.4rem; 
+            color: #475569; 
+            font-weight: 300; 
+        }
+
+        .hero-text strong { 
+            color: var(--slate); 
+            font-weight: 600; 
+        }
+
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 80px 20px; 
+        }
         
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; color: var(--cobalt); font-weight: 700; }
+        .section-header { 
+            text-align: center; 
+            margin-bottom: 50px; 
+        }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .section-title { 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            color: var(--cobalt); 
+            font-weight: 700; 
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
         
         .card { 
             background: rgba(255, 255, 255, 0.8); 
@@ -45,51 +97,108 @@
             border-radius: 12px; 
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
         }
+
         .card:hover { 
             transform: translateY(-5px);
             border-color: var(--cobalt); 
             box-shadow: 0 20px 40px rgba(0,0,0,0.05); 
         }
-        .card h3 { margin-top: 0; color: var(--cobalt); font-size: 1.5rem; }
-        .card p { color: #64748b; font-size: 1rem; }
+
+        .card h3 { 
+            margin-top: 0; 
+            color: var(--cobalt); 
+            font-size: 1.5rem; 
+        }
+
+        .card p { 
+            color: #64748b; 
+            font-size: 1rem; 
+        }
 
         .badge { 
-            display: inline-block; background: #eff6ff; color: var(--cobalt); 
-            padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; 
-            font-weight: 600; margin: 8px 4px 0 0; border: 1px solid #dbeafe;
+            display: inline-block; 
+            background: #eff6ff; 
+            color: var(--cobalt); 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 0.75rem; 
+            font-weight: 600; 
+            margin: 8px 4px 0 0; 
+            border: 1px solid #dbeafe;
         }
 
-        /* Specialized Project Section */
+        /* Featured Project */
         .featured-project { 
-            background: white; border: 2px solid var(--cobalt); padding: 40px; 
-            border-radius: 16px; margin-top: 40px; position: relative;
+            background: white; 
+            border: 2px solid var(--cobalt); 
+            padding: 40px; 
+            border-radius: 16px; 
+            margin-top: 40px; 
+            position: relative;
         }
+
         .featured-tag { 
-            position: absolute; top: -15px; left: 30px; background: var(--cobalt); 
-            color: white; padding: 4px 15px; border-radius: 5px; font-size: 0.8rem; font-weight: 700;
+            position: absolute; 
+            top: -15px; 
+            left: 30px; 
+            background: var(--cobalt); 
+            color: white; 
+            padding: 4px 15px; 
+            border-radius: 5px; 
+            font-size: 0.8rem; 
+            font-weight: 700;
         }
 
         .cta-box { 
-            background: var(--slate); color: white; padding: 80px 40px; 
-            border-radius: 20px; text-align: center; margin-top: 100px;
+            background: var(--slate); 
+            color: white; 
+            padding: 80px 40px; 
+            border-radius: 20px; 
+            text-align: center; 
+            margin-top: 100px;
             box-shadow: 0 30px 60px rgba(0,0,0,0.2);
         }
-        .cta-box h2 { font-size: 2rem; margin-bottom: 20px; }
-        .cta-box a { color: var(--neon); text-decoration: none; font-weight: 700; font-size: 1.1rem; }
-        
-        footer { text-align: center; padding: 60px; font-size: 0.9rem; color: #94a3b8; }
 
-        @media (max-width: 768px) { .logo { font-size: 2rem; } .hero-text { font-size: 1.1rem; } }
+        .cta-box h2 { 
+            font-size: 2rem; 
+            margin-bottom: 20px; 
+        }
+
+        .cta-box a { 
+            color: var(--neon); 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 1.1rem; 
+        }
+        
+        footer { 
+            text-align: center; 
+            padding: 60px; 
+            font-size: 0.9rem; 
+            color: #94a3b8; 
+        }
+
+        @media (max-width: 768px) { 
+            .hero-text { font-size: 1.1rem; } 
+            .logo img { max-width: 260px; }
+        }
     </style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">ThruputDynamics</div>
-    <p class="hero-text">Bridging the gap between <strong>Lean Six Sigma</strong> methodology and <strong>Intelligent Automation</strong>.</p>
+    <div class="logo">
+        <img src="logo.png" alt="ThruputDynamics Logo">
+    </div>
+    <p class="hero-text">
+        Bridging the gap between <strong>Lean Six Sigma</strong> methodology and 
+        <strong>Intelligent Automation</strong>.
+    </p>
 </header>
 
 <div class="container">
+
     <div class="section-header">
         <span class="section-title">Operational Excellence Stack</span>
     </div>
@@ -98,12 +207,19 @@
         <div class="card">
             <h3>Enterprise SaaS</h3>
             <p>Developing proprietary B2B frameworks focused on logistics and supply chain "thruput".</p>
-            <div class="badge">PHP (PDO)</div> <div class="badge">MySQL</div> <div class="badge">PWA</div> <div class="badge">REST APIs</div>
+            <div class="badge">PHP (PDO)</div>
+            <div class="badge">MySQL</div>
+            <div class="badge">PWA</div>
+            <div class="badge">REST APIs</div>
         </div>
+
         <div class="card">
             <h3>Low-Code Ecosystems</h3>
             <p>Optimizing Microsoft & Google environments for rapid enterprise deployment.</p>
-            <div class="badge">Power Apps</div> <div class="badge">Apps Script</div> <div class="badge">Dataverse</div> <div class="badge">Power BI</div>
+            <div class="badge">Power Apps</div>
+            <div class="badge">Apps Script</div>
+            <div class="badge">Dataverse</div>
+            <div class="badge">Power BI</div>
         </div>
     </div>
 
@@ -130,10 +246,12 @@
             <h4>Social Architecture</h4>
             <p>Advanced Discord infrastructure and custom bot deployment for managed communities.</p>
         </div>
+
         <div class="card">
             <h4>AI Agent Integration</h4>
             <p>Intelligent automation agents designed to handle repetitive system requests.</p>
         </div>
+
         <div class="card">
             <h4>Systems Infrastructure</h4>
             <p>Performance-tuned gaming server management and network architecture.</p>
@@ -149,6 +267,7 @@
     <footer>
         &copy; 2026 ThruputDynamics | Efficiency through well-architected systems.
     </footer>
+
 </div>
 
 </body>
