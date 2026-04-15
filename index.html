@@ -1,188 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThruputDynamics | Operational Excellence & Automation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root { 
-            --cobalt: #0047AB; 
-            --neon: #00d8ff; 
-            --slate: #1e272e; 
-            --light-bg: #f8fafc;
-            --border: #e2e8f0;
-        }
-        
-        body { 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.6; 
-            color: var(--slate); 
-            margin: 0; 
-            background: var(--light-bg); 
-            overflow-x: hidden; 
-        }
-        
-        /* Subtle Grid Pattern Background */
-        body::before {
-            content: "";
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%;
-            background-image: radial-gradient(#cbd5e1 0.5px, transparent 0.5px);
-            background-size: 24px 24px;
-            opacity: 0.3; 
-            z-index: -1;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header { 
-            padding: 100px 20px; 
-            text-align: center; 
-            background: white; 
-            border-bottom: 1px solid var(--border); 
-        }
+<title>ThruputDynamics | Operational Excellence & Automation</title>
 
-        .logo img {
-            max-width: 360px;
-            height: auto;
-            margin-bottom: 10px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        .hero-text { 
-            max-width: 800px; 
-            margin: 25px auto; 
-            font-size: 1.4rem; 
-            color: #475569; 
-            font-weight: 300; 
-        }
+<style>
+:root {
+    --bg: #0b0f19;
+    --primary: #2563eb;
+    --accent: #00d8ff;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+}
 
-        .hero-text strong { 
-            color: var(--slate); 
-            font-weight: 600; 
-        }
+* { box-sizing: border-box; }
 
-        .container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 80px 20px; 
-        }
-        
-        .section-header { 
-            text-align: center; 
-            margin-bottom: 50px; 
-        }
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #111827, #020617);
+    color: var(--text);
+}
 
-        .section-title { 
-            font-size: 0.85rem; 
-            text-transform: uppercase; 
-            letter-spacing: 3px; 
-            color: var(--cobalt); 
-            font-weight: 700; 
-        }
+/* HERO */
+header {
+    text-align: center;
+    padding: 120px 20px 100px;
+}
 
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px; 
-        }
-        
-        .card { 
-            background: rgba(255, 255, 255, 0.8); 
-            backdrop-filter: blur(10px);
-            padding: 40px; 
-            border: 1px solid var(--border); 
-            border-radius: 12px; 
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
-        }
+.logo img {
+    max-width: 360px;
+    animation: float 6s ease-in-out infinite;
+}
 
-        .card:hover { 
-            transform: translateY(-5px);
-            border-color: var(--cobalt); 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05); 
-        }
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
 
-        .card h3 { 
-            margin-top: 0; 
-            color: var(--cobalt); 
-            font-size: 1.5rem; 
-        }
+.hero-title {
+    font-size: 2.5rem;
+    margin-top: 30px;
+    background: linear-gradient(90deg, white, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .card p { 
-            color: #64748b; 
-            font-size: 1rem; 
-        }
+.hero-text {
+    max-width: 700px;
+    margin: 20px auto;
+    color: var(--muted);
+    font-size: 1.2rem;
+}
 
-        .badge { 
-            display: inline-block; 
-            background: #eff6ff; 
-            color: var(--cobalt); 
-            padding: 5px 12px; 
-            border-radius: 20px; 
-            font-size: 0.75rem; 
-            font-weight: 600; 
-            margin: 8px 4px 0 0; 
-            border: 1px solid #dbeafe;
-        }
+/* CTA BUTTON */
+.cta-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-        /* Featured Project */
-        .featured-project { 
-            background: white; 
-            border: 2px solid var(--cobalt); 
-            padding: 40px; 
-            border-radius: 16px; 
-            margin-top: 40px; 
-            position: relative;
-        }
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+}
 
-        .featured-tag { 
-            position: absolute; 
-            top: -15px; 
-            left: 30px; 
-            background: var(--cobalt); 
-            color: white; 
-            padding: 4px 15px; 
-            border-radius: 5px; 
-            font-size: 0.8rem; 
-            font-weight: 700;
-        }
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
 
-        .cta-box { 
-            background: var(--slate); 
-            color: white; 
-            padding: 80px 40px; 
-            border-radius: 20px; 
-            text-align: center; 
-            margin-top: 100px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-        }
+/* SECTION */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-size: 0.8rem;
+}
 
-        .cta-box h2 { 
-            font-size: 2rem; 
-            margin-bottom: 20px; 
-        }
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
 
-        .cta-box a { 
-            color: var(--neon); 
-            text-decoration: none; 
-            font-weight: 700; 
-            font-size: 1.1rem; 
-        }
-        
-        footer { 
-            text-align: center; 
-            padding: 60px; 
-            font-size: 0.9rem; 
-            color: #94a3b8; 
-        }
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 16px;
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(20px);
+}
 
-        @media (max-width: 768px) { 
-            .hero-text { font-size: 1.1rem; } 
-            .logo img { max-width: 260px; }
-        }
-    </style>
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+}
+
+.card h3, .card h4 {
+    margin-top: 0;
+    color: white;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+/* BADGES */
+.badge {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    background: rgba(37,99,235,0.2);
+}
+
+/* FEATURE */
+.featured {
+    margin-top: 60px;
+    padding: 50px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(0,216,255,0.1));
+    text-align: center;
+}
+
+/* CTA */
+.cta {
+    margin-top: 120px;
+    text-align: center;
+    padding: 80px 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2563eb, #00d8ff);
+}
+
+footer {
+    text-align: center;
+    padding: 60px;
+    color: var(--muted);
+}
+
+/* responsive */
+@media(max-width:768px){
+    .hero-title { font-size: 1.8rem; }
+    .logo img { max-width: 260px; }
+}
+</style>
 </head>
 
 <body>
@@ -191,84 +178,101 @@
     <div class="logo">
         <img src="logo.png" alt="ThruputDynamics Logo">
     </div>
+
+    <h1 class="hero-title">
+        Engineering Throughput. Eliminating Waste.
+    </h1>
+
     <p class="hero-text">
-        Bridging the gap between <strong>Lean Six Sigma</strong> methodology and 
-        <strong>Intelligent Automation</strong>.
+        We build intelligent systems that combine <strong>Lean methodology</strong> with 
+        <strong>automation and AI</strong> to optimize real-world operations.
     </p>
+
+    <a href="mailto:info@thruputdynamics.com" class="cta-btn">
+        Get Early Access
+    </a>
 </header>
 
 <div class="container">
 
-    <div class="section-header">
-        <span class="section-title">Operational Excellence Stack</span>
-    </div>
-    
+    <div class="section-title">Core Capabilities</div>
+
     <div class="grid">
         <div class="card">
             <h3>Enterprise SaaS</h3>
-            <p>Developing proprietary B2B frameworks focused on logistics and supply chain "thruput".</p>
-            <div class="badge">PHP (PDO)</div>
+            <p>Custom throughput-driven systems for logistics and operations.</p>
+            <div class="badge">PHP</div>
             <div class="badge">MySQL</div>
             <div class="badge">PWA</div>
-            <div class="badge">REST APIs</div>
         </div>
 
         <div class="card">
-            <h3>Low-Code Ecosystems</h3>
-            <p>Optimizing Microsoft & Google environments for rapid enterprise deployment.</p>
+            <h3>Automation Systems</h3>
+            <p>Low-code ecosystems for rapid deployment and scaling.</p>
             <div class="badge">Power Apps</div>
             <div class="badge">Apps Script</div>
-            <div class="badge">Dataverse</div>
-            <div class="badge">Power BI</div>
+        </div>
+
+        <div class="card">
+            <h3>AI Integration</h3>
+            <p>Autonomous agents handling repetitive workflows.</p>
+            <div class="badge">AI Agents</div>
         </div>
     </div>
 
-    <div class="featured-project">
-        <span class="featured-tag">Current R&D Flagship</span>
-        <div class="grid">
-            <div>
-                <h3>B2B Wholesale Portal</h3>
-                <p>An industry-agnostic engine designed to eliminate "ordering waste." Featuring automated 14:00 cut-off logic and collective threshold tracking.</p>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <div class="badge" style="background: var(--cobalt); color: white;">Lean Methodology</div>
-                <div class="badge" style="background: var(--cobalt); color: white;">Error Proofing</div>
-            </div>
-        </div>
+    <div class="featured">
+        <h2>B2B Wholesale Engine</h2>
+        <p>
+            A system designed to eliminate ordering inefficiencies through automation,
+            threshold logic, and throughput optimization.
+        </p>
     </div>
 
-    <div class="section-header" style="margin-top: 100px;">
-        <span class="section-title">Specialized Automation Lab</span>
-    </div>
-    
+    <div class="section-title" style="margin-top:80px;">Infrastructure</div>
+
     <div class="grid">
         <div class="card">
-            <h4>Social Architecture</h4>
-            <p>Advanced Discord infrastructure and custom bot deployment for managed communities.</p>
+            <h4>Social Systems</h4>
+            <p>Scalable Discord infrastructure and automation.</p>
         </div>
 
         <div class="card">
-            <h4>AI Agent Integration</h4>
-            <p>Intelligent automation agents designed to handle repetitive system requests.</p>
+            <h4>AI Agents</h4>
+            <p>Smart systems executing operational tasks autonomously.</p>
         </div>
 
         <div class="card">
-            <h4>Systems Infrastructure</h4>
-            <p>Performance-tuned gaming server management and network architecture.</p>
+            <h4>Performance Engineering</h4>
+            <p>Optimized infrastructure and system architecture.</p>
         </div>
     </div>
 
-    <div class="cta-box">
-        <h2>System Launch: 2027</h2>
-        <p>Currently in private development for 2026 R&D Cycle.</p>
-        <p>Strategic Inquiries: <a href="mailto:info@thruputdynamics.com">info@thruputdynamics.com</a></p>
+    <div class="cta">
+        <h2>Launching 2027</h2>
+        <p>Private R&D in progress — limited early access available.</p>
+        <a href="mailto:info@thruputdynamics.com" class="cta-btn">Contact Us</a>
     </div>
-
-    <footer>
-        &copy; 2026 ThruputDynamics | Efficiency through well-architected systems.
-    </footer>
 
 </div>
+
+<footer>
+    © 2026 ThruputDynamics — Built for efficiency
+</footer>
+
+<script>
+/* SCROLL ANIMATION */
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
 
 </body>
 </html>
